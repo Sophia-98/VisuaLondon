@@ -1,19 +1,26 @@
-import React, { Suspense, useRef } from "react"
+import React, { Suspense, useRef, useState } from "react"
 import { Canvas} from "@react-three/fiber"
 
 import Controls from './components/map/controls'
 import  Map  from './components/map/mapPlane'
 import Sky from './components/map/sky'
 import Icon from './components/map/icons'
+import Loading from './components/loading'
 
 
 const App = () => {
   const poi = useRef()
+  const [loadingComplete, setLoadingComplete] = useState(false)
   return (
+    <div style={{ position: "relative", width: "100%", height: "100vh" }}>
+    {!loadingComplete && <Loading onLoadingComplete={() => setLoadingComplete(true)} />}
+
+    {loadingComplete && (
     <Canvas camera={{ position: [0, 0, 10], fov: 75, up: [0, 0, 1] }}>
-      <Sky />
+      
       <ambientLight intensity={Math.PI / 1.5} />
       <Suspense fallback={null}>
+      <Sky />
       <Icon position={[10, 5, -9.5]} url={"../assets/map_images/icon_images/Newham_Icon.png"} size={5} />
         <Icon position={[2, -0.5, -9.5]} url={"../assets/map_images/icon_images/Southwark_icon.png"} size={4.5} />
         <Icon position={[11.7, -6, -9.5]} url={"../assets/map_images/icon_images/Greenwich_Icon.png"} size={5} />
@@ -23,11 +30,13 @@ const App = () => {
 
       <Controls />
     </Canvas>
+    )}
+    </div>
   )
 }
 
 export default App;
-// const Controls = () => {
+
 //   const { camera } = useThree()
 //   const controlsRef = useRef()
 
