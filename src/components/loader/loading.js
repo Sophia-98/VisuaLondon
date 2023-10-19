@@ -13,7 +13,7 @@ const Loading = ({ onLoadingComplete }) => {
       setLoading(false);
       // Notify the parent component that loading is complete
       onLoadingComplete();
-    }, 2000);
+    }, 3000);
 
     // Clear the timeout if the component is unmounted before the delay
     return () => clearTimeout(timeoutId);
@@ -27,8 +27,12 @@ const Loading = ({ onLoadingComplete }) => {
         top: "50%",
         left: "50%",
         transform: "translate(-50%, -50%)",
+        alignItems: 'center',
+        justifyContent: 'center',
+        display: 'flex',
       }}>
-      <img src="../assets/main_components/Loading.gif" alt="Loading..." style={{ width: "20em", height: "18em" }} />
+      <img src="../assets/main_components/Loading.gif" alt="Loading..." style={{ width: "40em", height: "40m" }} />
+      <h1 style={{ position: "absolute", bottom: '30%' }}>Loading...</h1>
     </div>
   ) : null;
 };

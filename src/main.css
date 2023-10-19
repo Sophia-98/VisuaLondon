@@ -1,0 +1,871 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  overflow: hidden;
+  font-family: 'Amatic SC', cursive;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+body {
+  background: white;
+  color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+nav {
+
+    background-color:rgb(230, 225, 220);
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    right: 0;
+
+    height: 70px;
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+   
+
+    z-index: 102;
+
+    border-bottom: brown double;
+
+}
+
+
+
+
+
+
+
+
+.title{
+
+   
+
+    position: relative;
+
+  background-repeat:no-repeat;
+
+    max-width: 110%;
+
+    max-height:110%;
+
+    margin-top: -5%;
+
+    padding-left: 5%;
+
+    
+
+    z-index: 101;
+
+
+
+}
+
+
+
+.titlewrap {
+  border-radius: 15px 50px;
+  border: brown double;
+  background: antiquewhite;
+  z-index: 101;
+  height: 15%;
+  width: 20%;
+  position: fixed;
+  top: 8%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Center the element */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+
+
+
+.nav-toggle {
+
+	cursor: pointer;
+
+	display: inline-block;
+
+}
+
+
+
+.nav-toggle:focus{
+
+	background-color:transparent ;
+
+}
+
+.nav-toggle:hover{
+
+	color:#fff
+
+}
+
+
+
+
+
+#main-nav-toggle {
+
+	position: absolute;
+
+	left: -999em;
+
+}
+
+.frame__nav {
+
+  
+
+	  position: relative;
+
+    margin: 1rem 0;
+
+    text-align: left;
+
+    margin-left: 1rem;
+
+}
+
+#main-nav-toggle:checked~nav.main-nav {
+
+	display: flex;
+
+	opacity: 1;
+
+	pointer-events: all;
+
+}
+
+
+
+.main-nav__canvas {
+
+	display: none;
+
+}
+
+
+
+  
+
+.main-nav {
+
+	transition: 0.3s opacity;
+
+	align-items: center;
+
+	background: #E8E2D8;
+
+	font-family: 'Amatic SC', cursive;
+
+	justify-content: center;
+
+	display: flex;
+
+	height: 100%;
+
+	left: 0px;
+
+	opacity: 0;
+
+	pointer-events: none;
+
+	position: fixed;
+
+	top: 0px;
+
+	width: 100%;
+
+  z-index: 1004;
+
+  text-decoration: none;
+
+}
+
+
+
+ul.main-nav__fallback {
+
+	list-style: none;
+
+	margin: 0;
+
+	padding: 0;
+
+	text-align: center;
+
+}
+
+
+
+ul.main-nav__fallback li {
+
+	font-size: 5vw;
+
+	color: #cf5500;
+
+	text-decoration: none;
+
+}
+
+
+
+ul.main-nav__fallback li:hover {
+
+	font-size: 5vw;
+
+	color: #405F8B;
+
+	text-decoration: none;
+
+}
+
+
+
+
+
+@media only screen and (min-width: 40.063em) {
+
+	.main-nav__canvas {
+
+		display: block;
+
+		height: 100%;
+
+		left: 0px;
+
+		position: fixed;
+
+		top: 0px;
+
+		width: 100%;
+
+		z-index: 100;
+
+	}
+
+}
+
+
+
+.main-nav__close {
+
+	position: fixed;
+
+	left: 2rem;
+
+	transform: translateX(-50%);
+
+	top: 1rem;
+
+	z-index: 101;
+
+	cursor: pointer;
+
+	fill: #405F8B;
+
+}
+
+.main-nav__close:hover {
+
+	
+
+	fill: #fff;
+
+}
+
+.main-nav__close:focus {
+
+	
+
+  background-color:transparent ;
+
+}
+
+
+
+
+.card1,
+
+.card2,
+
+.card3,
+
+.card4 {
+
+  position: absolute;
+
+ 
+
+  background-size: cover;
+
+  background-position: center center;
+
+  background-repeat: no-repeat;
+
+  will-change: transform;
+
+  z-index: 3;
+
+}
+
+
+
+.card1 {
+
+
+
+  width: 65em;
+ height: auto;
+  box-shadow: 0px 100px 10px -10px rgba(0, 0, 0, 0.5);
+
+
+}
+
+
+
+.card3 {
+
+
+
+  width:45%;
+
+  height: auto;
+
+  
+
+}
+
+
+
+.card2 {
+
+   width:55%;
+
+   height: auto;
+
+}
+
+
+
+.card4 {
+
+  width: 60ch;
+
+  height: 25ch;
+
+ 
+
+}
+
+
+
+.container {
+
+  width: 100%;
+
+  height: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: radial-gradient(#FBFBFB,#BFC6B8);
+
+  
+
+
+
+}
+
+.grenback {
+  width: 100vw;
+  height: 100%; /* Add this to make sure the image covers the whole height */
+  object-fit: cover;
+  position: absolute;
+  z-index: 1;
+}
+
+
+
+
+
+.card1S,
+
+.card2S,
+
+.card3S,
+
+.card4S,
+
+.card5S,
+
+.card6S,
+
+.cardB {
+
+  position: absolute;
+
+ 
+
+  background-size: cover;
+
+  background-position: center center;
+
+  background-repeat: no-repeat;
+
+  will-change: transform;
+
+  z-index: 3;
+
+}
+
+
+
+.card1S {
+
+
+
+  width: 40%;
+
+  height: auto;
+
+
+
+}
+
+
+
+.card3S {
+
+
+
+  width: 30%;
+
+  height: auto;
+   
+
+}
+
+
+
+.card2S {
+
+  width: 40%;
+
+  height: auto;
+
+  
+
+  
+
+}
+
+
+
+.card4S {
+
+  width: 35%;
+
+  height: auto;
+
+  
+
+}
+
+.card5S {
+
+  width: 30%;
+
+  height: auto;
+  box-shadow: 0px 100px 10px -10px rgba(81, 80, 66, 1);
+ 
+
+}
+
+.card6S {
+
+  width: 100%;
+
+  height: ;
+
+  
+
+}
+
+.wave {
+
+  max-height: 100%;
+
+    width:99%;
+
+    bottom:1%;
+
+    opacity: .8;
+
+    position: absolute;
+
+    z-index: 4;
+
+  
+
+    
+
+}
+
+.wave2 {
+
+  max-height: 100%;
+
+    width:99.5%;
+
+    
+
+    opacity: .8;
+
+    position: absolute;
+
+    z-index: 2;
+
+    bottom:-1%;
+
+  
+
+    
+
+}
+
+
+
+.cardB {
+
+  height: 105%;
+
+  width: 85%;
+
+
+
+}
+
+
+
+
+.stations {
+
+    height: 85%;
+
+    width: auto;
+
+  padding-top:10%;
+
+  padding-left:6%;
+
+    background-repeat:no-repeat;
+
+
+}
+
+
+
+.titlewrapcircle {
+  position: fixed;
+  top: 1%;
+  left: 45%;
+  z-index: 101;
+  width: 10%;
+  height: 16%;
+  border-radius: 50%;
+  background: antiquewhite;
+  border: brown double;
+
+  /* Box Shadow */
+  box-shadow:
+    0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+
+.resize {
+
+  visibility: hidden;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+      z-index: 1998;
+
+      width:100%;
+
+      height:100%;
+
+      background-color: '#E2E1D0';
+
+      position: absolute;
+
+     
+
+  }
+
+
+
+@media only screen and (max-width: 1000px)  {
+
+ .resize {
+
+  visibility: visible;
+
+  display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      z-index: 1998;
+
+      width:100%;
+
+      height:100%;
+
+      background-color: #E2E1D0;
+
+      position: absolute;
+
+      
+
+  }
+
+}
+
+
+
+@media only screen and (max-height: 400px)  {
+
+  .resize {
+
+   visibility: visible;
+
+   display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+       z-index: 1998;
+
+       width:100%;
+
+       height:100%;
+
+       background-color: #E2E1D0;
+
+       position: absolute;
+
+       
+
+   }
+
+ }
+
+
+
+ .main1 {
+
+  height: 100%;
+
+  width: 100%;
+
+
+
+  z-index: 997;
+
+
+
+}
+
+
+
+
+
+
+
+.Contain {
+
+  border-radius: 50%;
+
+  position: absolute;
+
+  height: 100%;
+
+  width: 100%;
+
+  padding-left: 20px;
+
+
+
+  cursor: pointer;
+
+}
+
+.Contain p {
+
+  color: white;
+
+font-family: Arial, Helvetica, sans-serif;
+
+ 
+
+}
+
+
+
+.Item {
+
+  width: 100%;
+
+  height: 100%;
+
+  background: white;
+
+  border-radius: 5px 30px 30px 5px;
+
+  will-change: transform, opacity;
+
+  position: absolute;
+
+  bottom: 0.1%;
+
+}
+
+.Item p {
+
+  color: black;
+
+  font-family: 'Amatic SC', cursive;
+
+}
+
+
+
+.Overlay {
+
+ 
+
+  height: 100%;
+
+  width: 100%;
+
+  font-size: calc(10px + 2vmin);
+
+  color: white;
+
+  box-shadow: 0px 0px 10px 5px #776b6b;
+
+  position: absolute;
+
+  top: 7%;
+
+  z-index: 1001;
+
+}
+
+.text {
+
+  align-items: center;
+
+  color: #3f3f3f;
+
+}
+
+
+
+
+
+
+
+.begin {
+
+  width:30%;
+
+  height:20px;
+
+  position:absolute;
+
+  z-index: 3;
+
+  font-size:30px;
+
+  color:#6B522D;
+
+  bottom:10%;
+
+  right:25%;
+
+}
+
+.begin:hover{
+
+color:#405F8B;
+
+}
+
+
+
+.heading {
+
+  font-family: 'Cinzel', serif;
+
+}
+
+iframe {
+
+  
+
+  box-shadow: 0px 0px 24px -6px rgba(0,0,0,0.75);
+
+}

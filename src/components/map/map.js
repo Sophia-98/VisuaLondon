@@ -1,14 +1,16 @@
 import React, { Suspense, useRef, useState } from "react"
 import { Canvas} from "@react-three/fiber"
 
-import Controls from './components/map/controls'
-import  Map  from './components/map/mapPlane'
-import Sky from './components/map/sky'
-import Icon from './components/map/icons'
-import Loading from './components/loading'
+import Nav from '../navigation/navigation'
+import Controls from './controls'
+import  MapPlane  from './mapPlane'
+import Sky from './sky'
+import Icon from './icons'
+import Loading from '../loader/loading'
 
 
-const App = () => {
+
+const MapCanvas = () => {
   const poi = useRef()
   const [loadingComplete, setLoadingComplete] = useState(false)
   return (
@@ -16,26 +18,28 @@ const App = () => {
     {!loadingComplete && <Loading onLoadingComplete={() => setLoadingComplete(true)} />}
 
     {loadingComplete && (
+      <>
+      <Nav path='../assets/main_components/Logo.png' titlewrap="titlewrap" title="title" />
     <Canvas camera={{ position: [0, 0, 10], fov: 75, up: [0, 0, 1] }}>
-      
-      <ambientLight intensity={Math.PI / 1.5} />
       <Suspense fallback={null}>
-      <Sky />
-      <Icon position={[10, 5, -9.5]} url={"../assets/map_images/icon_images/Newham_Icon.png"} size={5} />
-        <Icon position={[2, -0.5, -9.5]} url={"../assets/map_images/icon_images/Southwark_icon.png"} size={4.5} />
-        <Icon position={[11.7, -6, -9.5]} url={"../assets/map_images/icon_images/Greenwich_Icon.png"} size={5} />
-        <Icon position={[-12, 7.5, -9.5]} url={"../assets/map_images/icon_images/Brent_icon.png"} size={4.5} />
-        <Map position={[1, 0, -10]} scale={2} ref={poi} />
+        <Sky />
+        <ambientLight intensity={Math.PI * 2.5} />
+        <Icon position={[10, 5, -9.5]} url={"../assets/map_images/icon_images/Newham_Icon.png"} size={5} to="/newham" />
+        <Icon position={[2, -0.5, -9.5]} url={"../assets/map_images/icon_images/Southwark_icon.png"} size={4.5} to="/southwark" />
+        <Icon position={[11.7, -6, -9.5]} url={"../assets/map_images/icon_images/Greenwich_Icon.png"} size={5} to="/greenwich" />
+        <Icon position={[-12, 7.5, -9.5]} url={"../assets/map_images/icon_images/Brent_icon.png"} size={4.5} to="/brent" />
+        <MapPlane position={[1, 0, -10]} scale={2} ref={poi} />
       </Suspense>
 
       <Controls />
     </Canvas>
+    </>
     )}
     </div>
   )
 }
 
-export default App;
+export default MapCanvas;
 
 //   const { camera } = useThree()
 //   const controlsRef = useRef()
