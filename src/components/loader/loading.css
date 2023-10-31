@@ -1,0 +1,29 @@
+.loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column; /* Place the h1 below the image */
+    align-items: center; /* Center the h1 horizontally */
+    
+}
+
+.loader img {
+    width: 30em;
+    height: auto;
+}
+
+.loader h1 {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: none;
+}
+
+@media screen and (max-width: 767px) {
+    .loader img {
+        width: 20em;
+        height: auto;
+    }
+  }

@@ -1,50 +1,46 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { useSpring, animated as a } from "react-spring";
+import { useSpring, animated as a, config } from "react-spring";
 import Loading from "../loader/loading";
 
+import './start.css'
+
 const Intro = () => {
-  const props1 = useSpring({
-    opacity: 1,
-    from: { opacity: 0 },
-    delay: 12000,
+  // useSpring animation for the begin text
+  const click_begin = useSpring({
+    display: "none",
+    from: { display: "none", opacity: 0, transform: "scale(0.5)" }, // Initial values
+    to: { display: "block", opacity: 1, transform: "scale(1)" }, // Final values
+    delay: 14000,
+    config: config.molasses, // Easing configuration
   });
 
-  const props2 = useSpring({
-    visibility: "visible",
-    from: { visibility: "hidden" },
-    delay: 3000,
-  });
+  // // useSpring ease-in animation/delay for gifs
+  // const intro_gifs = useSpring({
+  //   opacity: 1,
+  //   from: { opacity: 0 },
+  //   delay: 3000,
+  // });
 
   const [loadingComplete, setLoadingComplete] = useState(false);
 
   return (
-    <div style={{ width: "100%", height: "100%", position: "absolute" }}>
-      {!loadingComplete && <Loading onLoadingComplete={() => setLoadingComplete(true)} />}
-      {loadingComplete && (
-        <a.div
-          style={{
-            ...props2,
-            width: "100%",
-            height: "100%",
-            backgroundColor: "#E2E1D0",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <img style={{ width: "100%", height: "100%", position: "absolute", zIndex: 1 }} src="../assets/main_components/Frame.png" alt="Frame" />
-          <img style={{ width: "auto", height: "100%", position: "absolute", zIndex: 0 }} src="../assets/main_components/Intro.gif" alt="Intro" />
+    <div className="wrapper">
+    {!loadingComplete && <Loading onLoadingComplete={() => setLoadingComplete(true)} />}
+    {loadingComplete && (
+      <a.div  className="container" >
+        <img  className="frame" src="../assets/main_components/Frame.png" alt="Frame" />
+        <img  className="intro_gif" src="../assets/main_components/Intro.gif" alt="Intro" />
 
-          <Link to="/map">
-            <a.div className="begin" style={{ ...props1 }}>
-              Click Here To Begin
-            </a.div>
-          </Link>
-        </a.div>
-      )}
-    </div>
-  );
-};
+        <Link to="/map">
+          <a.p className="begin_text" style={{ ...click_begin }}>
+            Click Here To Begin
+          </a.p>
+        </Link>
+      </a.div>
+    )}
+  </div>
+);
+      };
 
 export default Intro;

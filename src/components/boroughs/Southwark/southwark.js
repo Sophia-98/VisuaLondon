@@ -22,12 +22,12 @@ export default function Card() {
       <>
     <Nav path = '../assets/locations/Southwark/Logo.png' titlewrap = "titlewrapcircle" title = "stations"/>
      <div className="container" onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}>
-     <animated.img className="card5S" style={{ transform: props.xy.interpolate(trans5) }} src ='../assets/locations/Southwark/borough_market.png'/>
-     <animated.img className="card4S" style={{ transform: props.xy.interpolate(trans4) }} src ='../assets/locations/Southwark/tate_museum.png'/>
-     <animated.img className="card3S" style={{ transform: props.xy.interpolate(trans3) }} src ='../assets/locations/Southwark/shakespeare.png'/>
-     <animated.img className="card2S" style={{ transform: props.xy.interpolate(trans2) }} src ='../assets/locations/Southwark/cathedral.png'/>
-     <animated.img className="card1S" style={{ transform: props.xy.interpolate(trans1) }} src ='../assets/locations/Southwark/imperial_war_museum.png'/>
-     <animated.img className="card6S" style={{ transform: props.xy.interpolate(trans6) }} src ='../assets/locations/Southwark/golden_hind.gif'/>
+     <animated.img className="card5S" style={{ transform: props.xy.to(trans5) }} src ='../assets/locations/Southwark/borough_market.png'/>
+     <animated.img className="card4S" style={{ transform: props.xy.to(trans4) }} src ='../assets/locations/Southwark/tate_museum.png'/>
+     <animated.img className="card3S" style={{ transform: props.xy.to(trans3) }} src ='../assets/locations/Southwark/shakespeare.png'/>
+     <animated.img className="card2S" style={{ transform: props.xy.to(trans2) }} src ='../assets/locations/Southwark/cathedral.png'/>
+     <animated.img className="card1S" style={{ transform: props.xy.to(trans1) }} src ='../assets/locations/Southwark/imperial_war_museum.png'/>
+     <animated.img className="card6S" style={{ transform: props.xy.to(trans6) }} src ='../assets/locations/Southwark/golden_hind.gif'/>
  
     <img className = "wave" src = '../assets/locations/Southwark/wave1.gif' alt='wave'/>
     <img className = "wave2" src = '../assets/locations/Southwark/wave2.gif' alt='wave'/>

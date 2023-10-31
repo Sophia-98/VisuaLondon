@@ -2,11 +2,13 @@ import React, { Suspense, useRef, useState } from "react"
 import { Canvas} from "@react-three/fiber"
 
 import Nav from '../navigation/navigation'
-import Controls from './controls'
-import  MapPlane  from './mapPlane'
-import Sky from './sky'
-import Icon from './icons'
+import Controls from './map_components/controls'
+import  MapPlane  from './map_components/mapPlane'
+import Sky from './map_components/sky'
+import Icon from './map_components/icons'
 import Loading from '../loader/loading'
+
+import './map.css'
 
 
 
@@ -14,23 +16,21 @@ const MapCanvas = () => {
   const poi = useRef()
   const [loadingComplete, setLoadingComplete] = useState(false)
   return (
-    <div style={{ position: "relative", width: "100%", height: "100vh" }}>
+    <div className="map_container">
     {!loadingComplete && <Loading onLoadingComplete={() => setLoadingComplete(true)} />}
-
     {loadingComplete && (
       <>
-      <Nav path='../assets/main_components/Logo.png' titlewrap="titlewrap" title="title" />
-    <Canvas camera={{ position: [0, 0, 10], fov: 75, up: [0, 0, 1] }}>
-      <Suspense fallback={null}>
-        <Sky />
-        <ambientLight intensity={Math.PI * 2.5} />
-        <Icon position={[10, 5, -9.5]} url={"../assets/map_images/icon_images/Newham_Icon.png"} size={5} to="/newham" />
-        <Icon position={[2, -0.5, -9.5]} url={"../assets/map_images/icon_images/Southwark_icon.png"} size={4.5} to="/southwark" />
-        <Icon position={[11.7, -6, -9.5]} url={"../assets/map_images/icon_images/Greenwich_Icon.png"} size={5} to="/greenwich" />
-        <Icon position={[-12, 7.5, -9.5]} url={"../assets/map_images/icon_images/Brent_icon.png"} size={4.5} to="/brent" />
-        <MapPlane position={[1, 0, -10]} scale={2} ref={poi} />
-      </Suspense>
-
+      <Nav path='../assets/main_components/Logo.png' titlewrap="titlewrap" title="logo" />
+      <Canvas camera={{ position: [0, 0, 10], fov: 75, up: [0, 0, 1] }}>
+        <Suspense fallback={null}>
+          <Sky />
+          <ambientLight intensity={Math.PI * 2.5} />
+          <Icon position={[10, 5, -9.5]} url={"../assets/map_images/icon_images/Newham_Icon.png"} size={5} to="/newham" />
+          <Icon position={[2, -0.5, -9.5]} url={"../assets/map_images/icon_images/Southwark_icon.png"} size={4.5} to="/southwark" />
+          <Icon position={[11.7, -6, -9.5]} url={"../assets/map_images/icon_images/Greenwich_Icon.png"} size={5} to="/greenwich" />
+          <Icon position={[-12, 7.5, -9.5]} url={"../assets/map_images/icon_images/Brent_icon.png"} size={4.5} to="/brent" />
+          <MapPlane position={[1, 0, -10]} scale={2} ref={poi} />
+        </Suspense>
       <Controls />
     </Canvas>
     </>

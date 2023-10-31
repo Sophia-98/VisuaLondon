@@ -1,0 +1,61 @@
+.container {
+    width: 100vw; /* Set the width to 100% to extend it to the full width of the screen */
+    height: 100vh;
+    background-color: #E2E1D0;
+    position: absolute; /* Set the background as fixed */
+    top: 0; /* Fix it to the top of the viewport */
+    left: 0; /* Fix it to the left of the viewport */
+    z-index: 1;
+    overflow: hidden;
+    display: flex;
+    justify-content:center;
+}
+
+.intro_gif {
+  width: auto;
+  height: 100vh;
+  position: absolute;
+  
+}
+
+.frame {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 1;
+}
+
+.wrapper {
+  height: 100vh; /* Set a minimum height to occupy the full viewport height */
+  width: 100vw;
+  position: absolute;  
+}
+
+
+.begin_text {
+  position:absolute;
+  z-index: 3;
+  font-size:2.3em;
+  color:#6B522D;
+  width: 100%;
+  text-align: center;
+  left: 0;
+  bottom:7%;
+}
+
+.begin_text:hover {
+  color: #405F8B;
+}
+
+@media screen and (max-width: 767px) {
+  .intro_gif {
+    width: auto;
+    height: 20em;
+    top: 17em;
+    
+  }
+
+  .begin_text {
+    bottom:27%;
+  }
+}

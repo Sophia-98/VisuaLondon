@@ -1,16 +1,21 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
+import './navigation.css'
 
 const Nav = ({ path, titlewrap, title }) => (
+  
   <div>
-    <nav className="nav-below">
+    <nav>
+      
       <div className={titlewrap}>
-        <img className={title} src={path} height="263" alt="visualondon" />
+        <img className={title} src={path} alt="visualondon" />
       </div>
-      <div className="frame">
-        <div className="frame__nav">
+
+      <div className="menu">
+        <div className="menu_burger">
           <label
-            className="main-nav-open nav-toggle"
+            className="nav-toggle"
             htmlFor="main-nav-toggle"
             tabIndex="0"
             aria-label="Menu"
@@ -29,7 +34,7 @@ const Nav = ({ path, titlewrap, title }) => (
         </div>
         <input type="checkbox" id="main-nav-toggle" />
         <nav className="main-nav">
-          <ul className="main-nav__fallback">
+          <ul className="main-nav_items">
             {[
               { to: "/", label: "Home" },
               { to: "/Map", label: "Explore" },
@@ -50,7 +55,7 @@ const Nav = ({ path, titlewrap, title }) => (
             ))}
           </ul>
           <label
-            className="main-nav__close nav-toggle"
+            className="main-nav_exit nav-toggle"
             htmlFor="main-nav-toggle"
             tabIndex="0"
             aria-label="Close menu"

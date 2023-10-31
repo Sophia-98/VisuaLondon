@@ -24,9 +24,9 @@ export default function Card() {
       
      <div className="container" onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}>
      
-     <animated.img className="card1" style={{ transform: props.xy.interpolate(trans1) }} src ='../assets/locations/Greenwich/queens_house.png'/>
-     <animated.img className="card2" style={{ transform: props.xy.interpolate(trans2) }} src = '../assets/locations/Greenwich/Royal Observatory_Texture.png'/>
-     <animated.img className="card3" style={{ transform: props.xy.interpolate(trans3) }} src ='../assets/locations/Greenwich/National_Maritime_museum.png'/>
+     <animated.img className="card1" style={{ transform: props.xy.to(trans1) }} src ='../assets/locations/Greenwich/queens_house.png'/>
+     <animated.img className="card2" style={{ transform: props.xy.to(trans2) }} src = '../assets/locations/Greenwich/Royal Observatory_Texture.png'/>
+     <animated.img className="card3" style={{ transform: props.xy.to(trans3) }} src ='../assets/locations/Greenwich/National_Maritime_museum.png'/>
     
       <img className = "grenback"src ='../assets/locations/Greenwich/Greenwich-BG.gif' alt='greenwich-bg'/>
  

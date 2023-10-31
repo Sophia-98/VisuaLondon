@@ -11,6 +11,8 @@ import React from "react"
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
 
 const App = () => (
+
+  //declaring routes that are used within the website
   <Router>
     <Routes>
       <Route exact path="/" element={<Intro />} />
