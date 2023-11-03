@@ -1,0 +1,149 @@
+.container_hover {
+  position: absolute;
+  padding: 25px;
+  background: white;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.05);
+  will-change: width, height;
+  z-index: 3;
+}
+
+.plus {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -1%;
+  left: 0;
+  width: 100%;
+  height: 90%;
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  font-size: 35px; /* Adjust the font size */
+}
+
+.hover_title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90%;
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  pointer-events: none;
+  font-size: 20px; /* Adjust the font size */
+  opacity: 0; /* Start with opacity at 0 */
+  transition: opacity 0.5s ease-in-out; /* Add a transition for opacity */
+}
+
+/* brent */
+
+.temple_hover {
+  display: flex;
+  bottom: 4em;
+  margin-left: 50%;
+}
+
+/* greenwich  */
+
+.cable_hover {
+  display: flex;
+  top:15%;
+  right: 10%;
+  
+}
+
+.nat_museum_hover {
+  display: flex;
+  top: 42%;
+  left: 15%;
+ 
+  
+}
+
+.queens_hover {
+  display: flex;
+  top: 20%;
+  right: 50%;
+  
+}
+
+.royal_hover {
+  display: flex;
+  bottom: 40%;
+  right: 20%;
+}
+
+/* southwark */
+
+
+.market_hover {
+  display: flex;
+  top: 20%;
+  right: 45%;
+}
+
+.cathedral_hover {
+  display: flex;
+  top: 40%;
+  right: 18%;
+}
+
+.hind_hover {
+  display: flex;
+  bottom: 10%;
+  right: 45%;
+}
+
+.war_mus_hover {
+  display: flex;
+  top: 33%;
+  left: 40%;
+
+}
+
+.globe_hover {
+
+  display: flex;
+  top: 47%;
+  left: 7%;
+
+}
+
+
+.tate_hover {
+
+  display: flex;
+  top:30%;
+  left: 17%;
+
+}
+
+
+
+@media screen and (max-width:900px) {
+  .container_hover {
+    position: relative;
+    margin-top: 1em;
+    margin-left: 2em;
+  }
+  
+  .plus {
+    position: relative;
+   
+  }
+  
+  .hover_title {
+    position: relative;
+  }
+
+
+  
+  
+}
+

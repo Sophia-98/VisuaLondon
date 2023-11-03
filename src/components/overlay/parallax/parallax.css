@@ -1,0 +1,168 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+
+.background {
+  background: #efe7db;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.scrollText {
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background-color: #cec8c6;
+  height: 100vh;
+  width: 100vw;
+  box-shadow: 0px 0px 24px -6px rgba(0, 0, 0, 0.75);
+  color: #000;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+  height: auto;
+  width: 25%;
+  text-align: left;
+  border-radius: 10px;
+  flex-direction: column;
+  padding: 1%;
+  background-color: white;
+  width: 45%;
+  height: auto;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+  z-index: -10;
+  margin-right: 5%;
+  font-family: 'Roboto', sans-serif;
+}
+
+.card ul {
+  margin-left: 2em;
+  margin-right: 2em;
+  margin-bottom: 2em;
+}
+.card ul li {
+  margin-bottom: 1em;
+}
+
+.card .heading {
+  height: auto;
+  width: 20em;
+  margin-top: 1.5em;
+}
+
+.card .footer {
+  margin-bottom: 1.5em;
+  height: auto;
+  width: 20em;
+}
+
+.sticky {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 25%;
+}
+
+.sticky img {
+  width: 25em;
+  height: auto;
+}
+
+.inner-border {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 10px;
+  position: relative;
+  border: 2px solid #2f4b31;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  align-items: center;
+}
+
+.outer-border {
+  border: 2px solid #2f4b31;
+  height: 99%;
+  width: 98%;
+  padding: 6px;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.mid-border {
+  border: 6px solid #2f4b31;
+  height: 100%;
+  width: 100%;
+  padding: 6px;
+  margin: auto;
+  border-radius: 10px;
+}
+
+iframe {
+  box-shadow: 0px 0px 24px -6px rgba(0, 0, 0, 0.4);
+  margin-top: 1em;
+  margin-bottom: 1.5em;
+  border: 0;
+  width: 80%;
+  height: 400px;
+}
+
+@media (max-width: 750px) {
+  .card {
+    font-size: 1rem;
+  }
+
+  .card .heading {
+    width: 15em;
+    height: auto;
+  }
+
+  .card .footer {
+    width: 15em;
+    height: auto;
+  }
+
+  .sticky img {
+    width: 20em !important;
+    margin-left: none !important;
+  }
+
+  .scrollText {
+    font-size: 1.5rem;
+    margin: 1%;
+  }
+}
+
+@media (max-width: 1400px) {
+  .sticky img {
+    width: 17em;
+  }
+}
+
+@media (max-width: 1150px) {
+  .card {
+    width: 100%;
+    margin: 3%;
+  }
+
+  .sticky img {
+    width: 20em;
+  }
+}

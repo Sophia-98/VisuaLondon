@@ -13,6 +13,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
 const App = () => (
 
   //declaring routes that are used within the website
+  <React.StrictMode>
   <Router>
     <Routes>
       <Route exact path="/" element={<Intro />} />
@@ -24,6 +25,7 @@ const App = () => (
 
     </Routes>
   </Router>
+  </React.StrictMode>
 )
 
 createRoot(document.getElementById("root")).render(<App />)

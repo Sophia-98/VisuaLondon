@@ -19,9 +19,18 @@
       }
   }
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 720px) {
     .temple {
         width:auto;
         height: 22em;
       }
   }
+
+
+  @media screen and (max-width:1500px) {
+    
+    .brent_bg_container {
+      overflow-x: hidden;
+    }
+ }
+

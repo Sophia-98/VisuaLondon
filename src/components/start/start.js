@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { useSpring, animated as a, config } from "react-spring";
+import { useSpring, animated as a, config } from "@react-spring/web";
 import Loading from "../loader/loading";
 
 import './start.css'

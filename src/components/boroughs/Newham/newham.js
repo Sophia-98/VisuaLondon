@@ -1,12 +1,24 @@
-import React from "react"
+import React from 'react';
+import Nav from '../../../components/navigation/navigation';
 
-const NewhamPage = () => {
+
+const Card = () => {
+
   return (
     <div>
-      <h1>Welcome to Newham!</h1>
-      {/* Add other content specific to the Newham page */}
+        <div>
+          <Nav path='../assets/locations/Newham/newham_logo.png' titlewrap="titlewraplocations" title="areas" />
+          <div className="loader">
+          <img src="../assets/main_components/Loading.gif" alt="Coming Soon" />
+         <h1>Page Coming Soon!</h1>
+          </div>
+ 
+          </div>
     </div>
-  )
-}
+  );
+};
 
-export default NewhamPage
+export default Card;
+
+
+
