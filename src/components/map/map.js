@@ -1,8 +1,7 @@
 import React, { Suspense, useRef, useState } from "react"
 import * as THREE from "three"
 import { Canvas, useFrame, useThree} from "@react-three/fiber"
-import {Text, Loader} from '@react-three/drei'
-
+import {Loader} from '@react-three/drei'
 
 
 import Nav from '../navigation/navigation'
@@ -81,14 +80,6 @@ function CameraAnimation({ minCameraPosition, maxCameraPosition, isCameraAnimati
   return null 
 }
 
-const LoadingScreen = () => {
-  return (
-    
-      <Text color="black" anchorX="center" anchorY="middle" >
-          Loading...
-        </Text>
-  );
-};
 
 export default  Loading(MapCanvas, IMAGES, 'map');
 
