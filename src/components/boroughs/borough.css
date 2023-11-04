@@ -58,6 +58,21 @@
    }
 
 
+   .image_stack {
+    margin-top: 4em;
+    padding-bottom: 4em;
+    padding-top: 7em;
+    align-items: center;
+    justify-content: flex-start; /* Align items at the top */
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    width: 100vw; 
+    overflow-x: hidden;
+    
+  
+  }
+
 
 @media screen and (max-width:1500px) {
 /*     
@@ -74,22 +89,7 @@
     overflow: hidden;
     }
 
-    
-    .image_stack {
-      margin-top: 4em;
-      padding-bottom: 4em;
-      padding-top: 7em;
-      align-items: center;
-      justify-content: flex-start; /* Align items at the top */
-      display: flex;
-      flex-direction: column;
-      overflow-y: scroll;
-      width: 100vw; 
-      overflow-x: hidden;
-      
-
-  }
-
+ 
 
     }
 

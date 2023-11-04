@@ -38,12 +38,12 @@ const Card = () => {
           {windowWidth >= 900 ? (
             <div>
               <Overlay data_number={0} position="temple_hover" />
-              <div style={{overflow:"hidden"}} className="container_borough bg_container brent_bg " onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}>
+              <div  className="container_borough bg_container brent_bg " onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}>
                 <animated.img
                   className="temple"
                   alt="Neasden Temple"
                   style={{ transform: props.xy.to(trans) }}
-                  src="../assets/locations/Brent/temple.gif"
+                  src={data[0].img}
                 />
               </div>
             </div>
