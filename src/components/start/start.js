@@ -1,36 +1,26 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { useSpring, animated as a, config } from "@react-spring/web";
-import Loading from "../loader/loading";
-
-import './start.css'
+// Intro.js
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { useSpring, animated as a, config } from '@react-spring/web';
+import Loading from '../loader/loading';
+import { IMAGES } from '../../images';
+import './start.css';
 
 const Intro = () => {
   // useSpring animation for the begin text
   const click_begin = useSpring({
-    display: "none",
-    from: { display: "none", opacity: 0, transform: "scale(0.5)" }, // Initial values
-    to: { display: "block", opacity: 1, transform: "scale(1)" }, // Final values
-    delay: 14000,
-    config: config.molasses, // Easing configuration
+    display: 'none',
+    from: { display: 'none', opacity: 0, transform: 'scale(0.5)' },
+    to: { display: 'block', opacity: 1, transform: 'scale(1)' },
+    delay: 12000,
+    config: config.molasses,
   });
-
-  // // useSpring ease-in animation/delay for gifs
-  // const intro_gifs = useSpring({
-  //   opacity: 1,
-  //   from: { opacity: 0 },
-  //   delay: 3000,
-  // });
-
-  const [loadingComplete, setLoadingComplete] = useState(false);
 
   return (
     <div className="wrapper">
-    {!loadingComplete && <Loading onLoadingComplete={() => setLoadingComplete(true)} />}
-    {loadingComplete && (
-      <a.div  className="container" >
-        <img  className="frame" src="../assets/main_components/Frame.png" alt="Frame" />
-        <img  className="intro_gif" src="../assets/main_components/Intro.gif" alt="Intro" />
+      <a.div className="container">
+        <img className="frame" src={IMAGES[0].url} alt="Frame" />
+        <img className="intro_gif" src={IMAGES[1].url} alt="Intro" />
 
         <Link to="/map">
           <a.p className="begin_text" style={{ ...click_begin }}>
@@ -38,9 +28,8 @@ const Intro = () => {
           </a.p>
         </Link>
       </a.div>
-    )}
-  </div>
-);
-      };
+    </div>
+  );
+};
 
-export default Intro;
+export default Loading(Intro, IMAGES, 'start'); 

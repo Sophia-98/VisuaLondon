@@ -4,7 +4,7 @@ import Parallax from "./parallax/parallax";
 import { animated, useTransition, config } from "@react-spring/web";
 import "./overlay.css";
 
-export default function App({ data_number, position }) {
+export default function App({ data_number, position, image_number }) {
   const [overlayVisible, setOverlayVisible] = useState(false);
 
   const toggleOverlay = () => setOverlayVisible(!overlayVisible);
@@ -44,7 +44,7 @@ export default function App({ data_number, position }) {
                   <path d="M11 9.586L20.192.393l1.415 1.415L12.414 11l9.193 9.192-1.415 1.415L11 12.414l-9.192 9.193-1.415-1.415L9.586 11 .393 1.808 1.808.393 11 9.586z" />
                 </svg>
               </label>
-              <Parallax data_number={data_number} />
+              <Parallax data_number={data_number} image_number={image_number}/>
             </animated.div>
           )
       )}

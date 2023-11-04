@@ -3,8 +3,9 @@ import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import "./parallax.css";
 
 import data from "../../../data";
+import {IMAGES} from '../../../images'
 
-export default function App({ data_number }) {
+export default function App({ data_number, image_number }) {
   const alignCenter = { display: "flex", alignItems: "center" };
 
   const [screenWidth, setScreenWidth] = React.useState(window.innerWidth);
@@ -57,7 +58,7 @@ export default function App({ data_number }) {
             }}
           >
             <div className="sticky">
-              <img src={data[data_number].img} alt={data[data_number].title}/>
+              <img src={IMAGES[image_number].url} alt={data[data_number].title}/>
             </div>
           </ParallaxLayer>
         
@@ -76,8 +77,8 @@ export default function App({ data_number }) {
               <div className="mid-border">
                 <div className="inner-border">
                   <img
-                    src="../assets/locations/Information_layout/Parallax_headings/facts_heading.png"
-                    alt="facts"
+                    src={IMAGES[21].url}
+                    alt={IMAGES[21].name}
                     className="heading"
                   />
                   <ul>
@@ -106,8 +107,8 @@ export default function App({ data_number }) {
               <div className="mid-border">
                 <div className="inner-border">
                   <img
-                    src="../assets/locations/Information_layout/Parallax_headings/activities_heading.png"
-                    alt="facts"
+                    src={IMAGES[22].url}
+                    alt={IMAGES[22].name}
                     className="heading"
                   />
                   <ul>
@@ -136,8 +137,8 @@ export default function App({ data_number }) {
               <div className="mid-border">
                 <div className="inner-border">
                   <img
-                    src="../assets/locations/Information_layout/Parallax_headings/location_heading.png"
-                    alt="facts"
+                    src={IMAGES[23].url}
+                    alt= {IMAGES[23].name}
                     className="heading"
                   />
                   <iframe

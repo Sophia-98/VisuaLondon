@@ -34,7 +34,7 @@ const data = [
       location: [
         "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2481.1316339694104!2d-0.26354638481953413!3d51.547485215593355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876119835e0846f%3A0x73d15f975bd09989!2sBAPS%20Shri%20Swaminarayan%20Mandir%2C%20London!5e0!3m2!1sen!2suk!4v1588856571816!5m2!1sen!2suk"
       ],
-      img: "../assets/locations/Brent/temple.gif",
+    
       
     },
     {
@@ -78,7 +78,7 @@ const data = [
         "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52113.95291823978!2d-0.212263421619216!3d51.50489721660962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876055e13f4150b%3A0x9767f7520297b0fc!2sEmirates%20Airline!5e0!3m2!1sen!2suk!4v1588971752948!5m2!1sen!2suk"
       ],
   
-      img: "../assets/locations/Greenwich/Cable_car.png"
+    
     },
     {
         title: ["National Maritime Museum"],
@@ -119,7 +119,7 @@ const data = [
           "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2484.762243199073!2d-0.007477684822426552!3d51.48087832046393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486b1647af26fcb3%3A0xcad4273caab4be1e!2sNational%20Maritime%20Museum!5e0!3m2!1sen!2suk!4v1588974673203!5m2!1sen!2suk"
         ],
     
-        img: "../assets/locations/Greenwich/National_Maritime_museum.png"
+       
       },
 
       {
@@ -160,7 +160,7 @@ const data = [
     
         ],
 
-        img: "../assets/locations/Greenwich/queens_house.png"
+       
       },
 
       {
@@ -210,7 +210,6 @@ const data = [
           "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2484.981366937547!2d-0.0026888848226461937!3d51.47685632075776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a82a8ca9dca7%3A0x31abb25f451c8402!2sRoyal%20Observatory%20Greenwich!5e0!3m2!1sen!2suk!4v1588859773449!5m2!1sen!2suk"
         ],
     
-        img: "../assets/locations/Greenwich/Royal Observatory_Texture.png "
       },
 
       {
@@ -255,7 +254,7 @@ const data = [
           "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.4230778329415!2d-0.09315168482132048!3d51.50545371866738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876035775cf660f%3A0x3128e7e59ca044b9!2sBorough%20Market!5e0!3m2!1sen!2suk!4v1588866401543!5m2!1sen!2suk"
         ],
     
-        img: "../assets/locations/Southwark/Borough_market_OR.png"
+      
       },
 
       {
@@ -299,7 +298,7 @@ const data = [
           "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.387624508377!2d-0.09178448482136406!3d51.50610421861982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487603571183a4d5%3A0x1e6e505ff27f7772!2sSouthwark%20Cathedral!5e0!3m2!1sen!2suk!4v1588864051128!5m2!1sen!2suk"
         ],
     
-        img: "../assets/locations/Southwark/Cathedral.png"
+        
       },
 
       {
@@ -341,7 +340,7 @@ const data = [
           "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.344480568942!2d-0.0925583848213231!3d51.506895818561915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876035654d1377b%3A0x8e99031073f2f63e!2sGolden%20Hinde!5e0!3m2!1sen!2suk!4v1588870387692!5m2!1sen!2suk"
         ],
     
-        img: "../assets/locations/Southwark/golden_hind.png"
+      
       },
 
       {
@@ -390,7 +389,7 @@ const data = [
           "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.981982664872!2d-0.10966813482183596!3d51.49519811941722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876012c1f3ceed3%3A0xfed51d88d007b387!2sImperial%20War%20Museum!5e0!3m2!1sen!2suk!4v1588870235957!5m2!1sen!2suk"
         ],
     
-        img: "../assets/locations/Southwark/imperial_war_museum.png"
+       
       },
 
       {
@@ -437,10 +436,10 @@ const data = [
         ],
   
         location: [
-          "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.279976334224!2d-0.09938268482126429!3d51.50807931847539!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604a905ae1621%3A0xe700778eb8b2878e!2sShakespeare&#39;s%20Globe!5e0!3m2!1sen!2suk!4v1588870334145!5m2!1sen!2suk"
+          "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1733.2966305811435!2d-0.09650119992138347!3d51.50743671331261!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604a8325498bb%3A0x8e66ee470ad136a7!2sOriginal%20site%20of%20the%20Globe%20Theatre!5e0!3m2!1sen!2suk!4v1699119795972!5m2!1sen!2suk"
         ],
     
-        img: "../assets/locations/Southwark/shakespeare_OR.png"
+    
       },
 
       {
@@ -493,7 +492,7 @@ const data = [
           "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.313640210034!2d-0.10188868482131307!3d51.50746166852055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604a931761995%3A0x1ffc6f23e06b9be7!2sTate%20Modern!5e0!3m2!1sen!2suk!4v1588864157242!5m2!1sen!2suk"
         ],
     
-        img: "../assets/locations/Southwark/tate_museum.png"
+       
       }
   
     

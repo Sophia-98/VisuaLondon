@@ -1,34 +1,64 @@
-import React, { useEffect, useState } from "react";
-import './loading.css'
+// withLoading.js
+import React, { useState, useEffect } from 'react';
+import './loading.css';
 
-const Loading = ({ onLoadingComplete }) => {
-  const [loading, setLoading] = useState(true);
+const Loading = (Component, images, page) => {
+  return function WithLoading(props) {
+    const [imgsLoaded, setImgsLoaded] = useState(false);
+    const [minLoadingTimePassed, setMinLoadingTimePassed] = useState(false);
 
-  useEffect(() => {
-    // Preload the GIF
-    const img = new Image();
-    img.src = "../assets/main_components/Loading.gif";
+    useEffect(() => {
+      const imagesToLoad = images.filter((image) => image.page === page);
+      const imagePromises = imagesToLoad.map((image) => loadWithPromise(image.url));
 
-    //  loading delay of 2 seconds
-    const timeoutId = setTimeout(() => {
-      setLoading(false);
-      // Notify the parent component that loading is complete
-      onLoadingComplete();
-    }, 3000);
+      const promises = [
+        Promise.all(imagePromises),
+        new Promise((resolve) => setTimeout(resolve, 3000)) // Wait for a minimum of 2.5 seconds
+      ];
 
-    // Clear the timeout if the component is unmounted before the delay
-    return () => clearTimeout(timeoutId);
-  }, [onLoadingComplete]);
+      Promise.all(promises)
+        .then(() => {
+          setMinLoadingTimePassed(true);
+        })
+        .catch((error) => {
+          console.error('Failed to load images', error);
+        });
+    }, []);
 
-  // Render the loading screen while loading is true
-  return loading ? (
-    <div className="loader">
-      <img src="../assets/main_components/Loading.gif" alt="Loading..." />
-      <h1>Loading...</h1>
-    </div>
- 
-    
-  ) : null;
+    const loadWithPromise = (url) => {
+      return new Promise((resolve, reject) => {
+        const loadImg = new Image();
+        loadImg.src = url;
+
+        loadImg.onload = () => {
+          resolve(url);
+        };
+
+        loadImg.onerror = () => {
+          reject(url);
+        };
+      });
+    };
+
+    useEffect(() => {
+      if (minLoadingTimePassed) {
+        setImgsLoaded(true);
+      }
+    }, [minLoadingTimePassed]);
+
+    return (
+      <div>
+        {!minLoadingTimePassed ? (
+          <div className="loader">
+            <img src="../assets/main_components/Loading.gif" alt="Loading..." />
+            <h1>Loading...</h1>
+          </div>
+        ) : imgsLoaded ? (
+          <Component {...props} />
+        ) : null}
+      </div>
+    );
+  };
 };
 
 export default Loading;
