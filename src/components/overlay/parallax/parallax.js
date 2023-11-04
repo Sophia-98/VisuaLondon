@@ -46,10 +46,12 @@ export default function App({ data_number }) {
 
         {isSticky ? (
           <ParallaxLayer
-            sticky={{ start: 0.4, end: 5 }}
+            sticky={{ start: 0, end: 3 }}
             style={{
               ...alignCenter,
-              marginLeft: "7em"
+              marginLeft: "7em",
+              zIndex: "-10"
+              
             }}
           >
             <div className="sticky">
@@ -59,7 +61,7 @@ export default function App({ data_number }) {
         ) : (
           <ParallaxLayer
             offset={1}
-            speed={1.5}
+            speed={2.5}
             style={{
               ...alignCenter,
               justifyContent: "center",

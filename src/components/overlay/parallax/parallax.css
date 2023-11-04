@@ -45,7 +45,7 @@
   width: 45%;
   height: auto;
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
-  z-index: -10;
+  z-index: 3;
   margin-right: 5%;
   font-family: 'Roboto', sans-serif;
 }

@@ -8,14 +8,14 @@
 
 
 .shakesp {
-  width: 32em;
+  width: 37em;
   height: auto;
 
 }
 
 
 .cathedral {
-  width: 37em;
+  width: 42em;
   height: auto;
 
 }
@@ -95,7 +95,7 @@
   }
   
   .globe_static{
-      width:25em;
+      width:28em;
       height: auto;
       margin-bottom: 3em;
       margin-top:2em;
@@ -103,7 +103,7 @@
   }
 
   .cathedral_static {
-    width:25em;
+    width:30em;
     height: auto;
     margin-bottom: 3em;
     margin-top:3em;
