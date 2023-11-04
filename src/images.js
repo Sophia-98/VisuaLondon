@@ -191,6 +191,48 @@ export const IMAGES = [
           "../assets/locations/Information_layout/Parallax_headings/location_heading.png"
       },
 
+      {
+        id: 24,
+        name:'footer',
+        page: [ "southwark", "brent", "greenwich"],
+        url:
+          "../assets/locations/Information_layout/Parallax_headings/footer.png"
+      },
+
+      {
+        id: 25,
+        name:'brent bg',
+        page:  "brent", 
+        url:
+          "../assets/locations/Brent/brent_bg.gif"
+      },
+
+      {
+        id: 26,
+        name:'greenwich bg',
+        page:  "greenwich",
+        url:
+          "../assets/locations/Greenwich/Greenwich-BG.gif"
+      },
+
+      {
+        id: 27,
+        name:'southwark bg',
+        page:  "southwark",
+        url:
+          "../assets/locations/Southwark/bg.gif"
+      },
+
+      {
+        id: 28,
+        name:'static bg',
+        page: [ "southwark", "brent", "greenwich"],
+        url:
+          "../assets/locations/Information_layout/BG.png"
+      },
+
+
+
 
 
 

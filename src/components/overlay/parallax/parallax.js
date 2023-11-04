@@ -146,7 +146,7 @@ export default function App({ data_number, image_number }) {
                     src={data[data_number].location}
                    
                   ></iframe>
-                  <img src="../assets/locations/Information_layout/Parallax_headings/footer.png" alt="facts" className="footer" />
+                  <img src={IMAGES[24].url}  alt="facts" className={IMAGES[24].name}  />
                 </div>
               </div>
             </div>
@@ -187,7 +187,7 @@ export default function App({ data_number, image_number }) {
       }}
     >
       <div className="sticky">
-        <img src={data[data_number].img} alt={data[data_number].title} />
+        <img src={IMAGES[image_number].url}  alt={data[data_number].title} />
       </div>
     </div>
 
@@ -206,8 +206,8 @@ export default function App({ data_number, image_number }) {
                 <div className="mid-border">
                   <div className="inner-border">
                     <img
-                      src="../assets/locations/Information_layout/Parallax_headings/facts_heading.png"
-                      alt="facts"
+                      src={IMAGES[21].url} 
+                      alt={IMAGES[21].name} 
                       className="heading"
                     />
                     <ul>
@@ -236,8 +236,8 @@ export default function App({ data_number, image_number }) {
                 <div className="mid-border">
                   <div className="inner-border">
                     <img
-                      src="../assets/locations/Information_layout/Parallax_headings/activities_heading.png"
-                      alt="facts"
+                      src={IMAGES[22].url} 
+                      alt={IMAGES[22].name} 
                       className="heading"
                     />
                     <ul>
@@ -265,8 +265,8 @@ export default function App({ data_number, image_number }) {
                 <div className="mid-border">
                   <div className="inner-border">
                     <img
-                      src="../assets/locations/Information_layout/Parallax_headings/location_heading.png"
-                      alt="facts"
+                      src={IMAGES[23].url} 
+                      alt={IMAGES[23].name} 
                       className="heading"
                     />
                     <iframe
@@ -274,7 +274,7 @@ export default function App({ data_number, image_number }) {
                       src={data[data_number].location}
                     
                     ></iframe>
-                    <img src="../assets/locations/Information_layout/Parallax_headings/footer.png" alt="facts" className="footer" />
+                    <img src={IMAGES[24].url}  alt="facts" className={IMAGES[24].name}  />
                   </div>
                 </div>
               </div>
