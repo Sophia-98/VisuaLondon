@@ -1,7 +1,7 @@
 import React, { Suspense, useRef, useState } from "react"
 import * as THREE from "three"
 import { Canvas, useFrame, useThree} from "@react-three/fiber"
-import {Text} from '@react-three/drei'
+import {Text, Loader} from '@react-three/drei'
 
 
 
@@ -33,7 +33,7 @@ const MapCanvas = () => {
     
       <Nav path={IMAGES[2].url} titlewrap="titlewrap" title="logo" />
       <Canvas camera={{ position: initialCameraPosition, fov: 75, up: [0, 0, 1] }}>
-        <Suspense fallback={<LoadingScreen/>}>
+        <Suspense fallback={null}>
         
           <Sky />
           <ambientLight intensity={Math.PI * 2.5} />
@@ -51,6 +51,7 @@ const MapCanvas = () => {
         onAnimationComplete={() => setCameraAnimationInProgress(false)}
       />
     </Canvas>
+    <Loader/>
   
   
     
