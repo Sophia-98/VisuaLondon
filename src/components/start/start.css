@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
 .container {
     width: 100vw; /* Set the width to 100% to extend it to the full width of the screen */
     height: 100vh;
@@ -10,6 +12,7 @@
     display: flex;
     justify-content:center;
 }
+
 
 .intro_gif {
   width: auto;
@@ -43,8 +46,19 @@
   bottom:7%;
 }
 
+.warning {
+  z-index: 2;
+  position: relative;
+  top:7em;
+  font-size: 1.2em;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  margin: 1em;
+}
+
 .begin_text:hover {
   color: #405F8B;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 767px) {
@@ -57,5 +71,10 @@
 
   .begin_text {
     bottom:27%;
+  }
+
+  .warning {
+    top:10em;
+
   }
 }
