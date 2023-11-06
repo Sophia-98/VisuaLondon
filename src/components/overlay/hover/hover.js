@@ -4,7 +4,7 @@ import {
   useChain,
   config,
   animated,
-  useSpringRef
+  useSpringRef,
 } from "@react-spring/web";
 
 import data from "../../../data";
@@ -14,6 +14,7 @@ const Hover = ({ overlay, data_number, position }) => {
   const [open, set] = useState(false);
   const [textVisible, setTextVisible] = useState(false);
 
+  // animation before and after
   const springApi = useSpringRef();
   const { width, left, ...rest } = useSpring({
     ref: springApi,
@@ -21,22 +22,23 @@ const Hover = ({ overlay, data_number, position }) => {
     from: {
       width: "50px",
       height: "50px",
-      background: "#ECB47C"
+      background: "#ECB47C",
     },
     to: {
       width: open ? data[data_number].width.toString() + "px" : "50px",
-      
-      background: open ? "white" : "#ECB47C"
-    }
+
+      background: open ? "white" : "#ECB47C",
+    },
   });
 
   const transApi = useSpringRef();
 
   useChain(open ? [springApi, transApi] : [transApi, springApi], [
     0,
-    open ? 0.1 : 0.6
+    open ? 0.1 : 0.6,
   ]);
 
+  // configuration on the visibiity and timing of text
   useEffect(() => {
     if (open) {
       const delay = setTimeout(() => {
@@ -56,6 +58,7 @@ const Hover = ({ overlay, data_number, position }) => {
       onMouseLeave={() => set(false)}
       onClick={overlay}
     >
+      {/* Open vs unponened elements */}
       {!open && (
         <div className="plus">
           <p>+</p>

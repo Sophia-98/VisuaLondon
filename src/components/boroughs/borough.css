@@ -8,90 +8,66 @@
 }
 
 .container_borough {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 0;
-    width: 100vw; /* Set the width to 100% to extend it to the full width of the screen */
-    height: 100vh;
-    position: absolute; /* Set the background as fixed */
-    top: 0; /* Fix it to the top of the viewport */
-    left: 0; /* Fix it to the left of the viewport */
-    z-index: 1;
-  }
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 0;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
 
-  .bg_container {
-    align-items: center;
-    justify-content: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center; /* Center the background image */
+.bg_container {
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.brent_bg {
+  background-image: url(../../../public/assets/locations/Brent/brent_bg.gif);
+}
+
+.south_bg {
+  background-image: url(../../../public/assets/locations//Southwark/bg.gif);
+}
+
+.gren_bg {
+  background-image: url(../../../public/assets/locations/Greenwich//Greenwich-BG.gif);
+}
+
+.bg_static {
+  background-image: url(../../../public/assets/locations/Information_layout/BG.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.image_stack {
+  margin-top: 4em;
+  padding-bottom: 4em;
+  padding-top: 7em;
+  align-items: center;
+  justify-content: flex-start;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+@media screen and (max-width: 1200px) {
+  .bg_static {
     overflow: hidden;
   }
-  
-
-  .brent_bg {
-    background-image: url(../../../public/assets/locations/Brent/brent_bg.gif);
-   }
-
-   .south_bg {
-    background-image: url(../../../public/assets/locations//Southwark/bg.gif);
- 
-   }
-
-  .gren_bg {
-    background-image: url(../../../public/assets/locations/Greenwich//Greenwich-BG.gif);
-
-   }
-
-   .bg_static {
-    background-image: url(../../../public/assets/locations/Information_layout/BG.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center; /* Center the background image */
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-
-   }
-
-
-   .image_stack {
-    margin-top: 4em;
-    padding-bottom: 4em;
-    padding-top: 7em;
-    align-items: center;
-    justify-content: flex-start; /* Align items at the top */
-    display: flex;
-    flex-direction: column;
-    overflow-y: scroll;
-    width: 100vw; 
-    overflow-x: hidden;
-    
-  
-  }
-
-
-@media screen and (max-width:1500px) {
-/*     
-    .bg_container {
-      overflow-x: scroll;
-    } */
- }
-
-
-
-    @media screen and (max-width:1200px) {
-        
-    .bg_static {
-    overflow: hidden;
-    }
-
- 
-
-    }
-
-
-
+}

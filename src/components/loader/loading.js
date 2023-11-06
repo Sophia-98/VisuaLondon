@@ -1,27 +1,30 @@
-// withLoading.js
-import React, { useState, useEffect } from 'react';
-import './loading.css';
+import React, { useState, useEffect } from "react";
+import "./loading.css";
 
 const Loading = (Component, images, page) => {
-  return function WithLoading(props) {
+  return function Loading(props) {
     const [imgsLoaded, setImgsLoaded] = useState(false);
     const [minLoadingTimePassed, setMinLoadingTimePassed] = useState(false);
 
+    // will load images that are within the image database and are under a certain page category that is passed through the parent element
     useEffect(() => {
       const imagesToLoad = images.filter((image) => image.page === page);
-      const imagePromises = imagesToLoad.map((image) => loadWithPromise(image.url));
+      const imagePromises = imagesToLoad.map((image) =>
+        loadWithPromise(image.url)
+      );
 
       const promises = [
         Promise.all(imagePromises),
-        new Promise((resolve) => setTimeout(resolve, 3000)) // Wait for a minimum of 2.5 seconds
+        new Promise((resolve) => setTimeout(resolve, 3000)), // Wait for a minimum of 3 seconds or will wait longer if needed
       ];
 
       Promise.all(promises)
         .then(() => {
           setMinLoadingTimePassed(true);
         })
+        // error handling
         .catch((error) => {
-          console.error('Failed to load images', error);
+          console.error("Failed to load images", error);
         });
     }, []);
 
@@ -40,6 +43,7 @@ const Loading = (Component, images, page) => {
       });
     };
 
+    // conditional outcome if images have loaded
     useEffect(() => {
       if (minLoadingTimePassed) {
         setImgsLoaded(true);

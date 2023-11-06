@@ -1,28 +1,33 @@
-import React, { useRef, useState } from "react"
-import { useFrame } from "@react-three/fiber"
-import { useTexture, useCursor } from "@react-three/drei"
-import { useNavigate } from "react-router-dom"
+import React, { useRef, useState } from "react";
+import { useFrame } from "@react-three/fiber";
+import { useTexture, useCursor } from "@react-three/drei";
+import { useNavigate } from "react-router-dom";
 
 const Icon = ({ size, url, to, ...props }) => {
-  const ref = useRef()
-  const [hovered, setHovered] = useState(false)
-  const navigate = useNavigate()
+  const ref = useRef();
+  const [hovered, setHovered] = useState(false);
+  const navigate = useNavigate();
 
-  const [icon] = useTexture([url])
-  const aspectRatio = icon.image.width / icon.image.height
+  const [icon] = useTexture([url]);
+  const aspectRatio = icon.image.width / icon.image.height;
 
+  // hovered animation configuration
   useFrame((state) => {
-    const scaleFactor = hovered ? 1 + Math.sin(state.clock.elapsedTime * 7) / (size * 4) : 1
-    ref.current.scale.set(size * aspectRatio, size, 0.5).multiplyScalar(scaleFactor)
-  })
+    const scaleFactor = hovered
+      ? 1 + Math.sin(state.clock.elapsedTime * 7) / (size * 4)
+      : 1;
+    ref.current.scale
+      .set(size * aspectRatio, size, 0.5)
+      .multiplyScalar(scaleFactor);
+  });
 
-  useCursor(hovered)
+  useCursor(hovered);
 
   const handleIconClick = (e) => {
-    e.stopPropagation()
-    // Use the navigate function to redirect to the specified route
-    navigate(to)
-  }
+    e.stopPropagation();
+    // Navigate function to redirect to the specified route
+    navigate(to);
+  };
 
   return (
     <sprite
@@ -33,11 +38,12 @@ const Icon = ({ size, url, to, ...props }) => {
       castShadow
       onClick={handleIconClick}
       // eslint-disable-next-line
-      onPointerOver={(e) => (e.stopPropagation(), setHovered(true))} 
-      onPointerOut={(e) => setHovered(false)}>
+      onPointerOver={(e) => (e.stopPropagation(), setHovered(true))}
+      onPointerOut={(e) => setHovered(false)}
+    >
       <spriteMaterial map={icon} />
     </sprite>
-  )
-  }
+  );
+};
 
-  export default Icon;
+export default Icon;

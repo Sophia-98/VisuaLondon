@@ -40,6 +40,8 @@
   "keywords": [],
   "description": "Interactive Map",
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "eslint": "^8.53.0",
+    "prettier": "^3.0.3"
   }
 }

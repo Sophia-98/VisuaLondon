@@ -1,36 +1,32 @@
-  
+.temple {
+  width: 52em;
+  height: auto;
+  z-index: 1;
+}
+
+@media screen and (max-width: 1700px) {
   .temple {
-    width:52em;
-    height: auto;
-    z-index: 1;
+    width: auto;
+    height: 43em;
   }
+}
 
-  @media screen and (max-width: 1700px) {
-    .temple {
-        width:auto;
-        height: 43em;
-      }
+@media screen and (max-width: 900px) {
+  .temple {
+    width: auto;
+    height: 30em;
   }
+}
 
-  @media screen and (max-width: 900px) {
-    .temple {
-        width:auto;
-        height: 30em;
-      }
+@media screen and (max-width: 720px) {
+  .temple {
+    width: auto;
+    height: 17em;
   }
+}
 
-  @media screen and (max-width: 720px) {
-    .temple {
-        width:auto;
-        height: 17em;
-      }
+@media screen and (max-width: 1500px) {
+  .brent_bg_container {
+    overflow-x: hidden;
   }
-
-
-  @media screen and (max-width:1500px) {
-    
-    .brent_bg_container {
-      overflow-x: hidden;
-    }
- }
-
+}

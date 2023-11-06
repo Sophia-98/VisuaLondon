@@ -5,11 +5,13 @@ nav {
   left: 0;
   width: 100vw;
   height: 70px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow:
+    0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
   z-index: 10;
   border-bottom: brown double;
   display: flex;
-  justify-content: center; /* Center horizontally */
+  justify-content: center;
 }
 
 .titlewrap {
@@ -20,7 +22,9 @@ nav {
   height: 10em;
   width: 23em;
   position: fixed;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow:
+    0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .titlewraplocations {
@@ -31,7 +35,9 @@ nav {
   border-radius: 50%;
   background: antiquewhite;
   border: brown double;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow:
+    0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .logo {
@@ -104,8 +110,8 @@ ul.main-nav_items li:hover {
 
 @media screen and (max-width: 767px) {
   .titlewrap {
-    width: 15em; /* Adjust the width for mobile screens */
-    height: 6.5em; /* Adjust the height for mobile screens */
+    width: 15em;
+    height: 6.5em;
   }
 
   .titlewraplocations {

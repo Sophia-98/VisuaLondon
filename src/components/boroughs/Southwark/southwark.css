@@ -1,136 +1,101 @@
-
-
-
 .imp_mus {
   width: 44em;
   height: auto;
 }
 
-
 .shakesp {
   width: 37em;
   height: auto;
-
 }
-
 
 .cathedral {
   width: 42em;
   height: auto;
-
 }
-
 
 .tate {
   width: 36em;
   height: auto;
-
 }
 
 .bour_mark {
   width: 32em;
   height: auto;
   box-shadow: 0px 100px 10px -10px rgba(81, 80, 66, 1);
- 
 }
 
 .golden {
   width: 40em;
   height: auto;
-
 }
 
 .wave {
-    height: 10em;
-    width:98vw;
-    bottom:1%;
-    opacity: .8;
-    position: absolute;
-    z-index: 3;
-
+  height: 10em;
+  width: 98vw;
+  bottom: 1%;
+  opacity: 0.8;
+  position: absolute;
+  z-index: 3;
 }
 
 .wave2 {
-    height: 10em;
-    width:98vw;
-    opacity: .8;
-    position: absolute;
-    z-index: 0;
-    bottom:3em;
-
+  height: 10em;
+  width: 98vw;
+  opacity: 0.8;
+  position: absolute;
+  z-index: 0;
+  bottom: 3em;
 }
 
-@media screen and (max-width:1500px) {
-    .wave {
-        width:100vw;
-    
-    }
-    
-    .wave2 {
-        width:100vw;
-    
-    }
+@media screen and (max-width: 1500px) {
+  .wave {
+    width: 100vw;
+  }
+
+  .wave2 {
+    width: 100vw;
+  }
 }
 
-
-
-
-@media screen and (max-width:1200px) {
-
+@media screen and (max-width: 1200px) {
   .market_static {
-      width: 23em;
-      height: auto;
-      margin-bottom: 4em;
-      margin-top:2em;
-     
-      
+    width: 23em;
+    height: auto;
+    margin-bottom: 4em;
+    margin-top: 2em;
   }
-  
+
   .tate_static {
-      width:20em;
-      height: auto;
-      margin-bottom: 4em;
-   
-  
+    width: 20em;
+    height: auto;
+    margin-bottom: 4em;
   }
-  
-  .globe_static{
-      width:23em;
-      height: auto;
-      margin-bottom: 3em;
-      margin-top:2em;
-  
+
+  .globe_static {
+    width: 23em;
+    height: auto;
+    margin-bottom: 3em;
+    margin-top: 2em;
   }
 
   .cathedral_static {
-    width:25em;
+    width: 25em;
     height: auto;
     margin-bottom: 3em;
-    margin-top:3em;
-      
-
+    margin-top: 3em;
   }
 
   .imperial_static {
-    width:20em;
+    width: 20em;
     height: auto;
     margin-bottom: 4em;
-    margin-top:2em;
-      
-
+    margin-top: 2em;
   }
 
-  
   .golden_static {
-    width:25em;
+    width: 25em;
     height: auto;
     margin-bottom: 4em;
-    margin-top:2em;
-      
-
+    margin-top: 2em;
   }
-
-
 }
-
-    
