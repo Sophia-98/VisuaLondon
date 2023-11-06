@@ -1,6 +1,6 @@
   
   .temple {
-    width:57em;
+    width:52em;
     height: auto;
     z-index: 1;
   }
@@ -22,7 +22,7 @@
   @media screen and (max-width: 720px) {
     .temple {
         width:auto;
-        height: 22em;
+        height: 17em;
       }
   }
 

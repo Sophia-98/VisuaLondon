@@ -18,7 +18,7 @@ const cathe = (x, y) => `translate3d(${x / 20+480}px,${y / 50+50}px,0)`
 const shakes = (x, y) => `translate3d(${x / 30-545}px,${y / 180+120}px,0)`
 const tate_mus = (x, y) => `translate3d(${x / 20-300}px,${y / 50-120}px,0)`
 const bour_mark = (x, y) => `translate3d(${x / 50+230}px,${y / 30-180}px,0)`
-const golden = (x, y) => `translate3d(${x / 40+430}px,${y / 80+300}px,0)`
+const golden = (x, y) => `translate3d(${x / 40+430}px,${y / 80+250}px,0)`
 
 
 

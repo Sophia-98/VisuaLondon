@@ -18,7 +18,7 @@
     @media screen and (max-width:1200px) {
 
     .queens_house_static {
-        width: 30em;
+        width: 20em;
         height: auto;
         margin-bottom: 6em;
         margin-top:2em;
@@ -27,21 +27,21 @@
     }
     
     .royal_observatory_static{
-        width:30em;
+        width:20em;
         height: auto;
      
     
     }
     
     .martime_museum_static{
-        width:30em;
+        width:20em;
         height: auto;
         margin-bottom: 5em;
     
     }
 
     .cable_car_static {
-        width: 30em;
+        width: 20em;
         height: auto;
         margin-bottom: 4em;
        
