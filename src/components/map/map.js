@@ -71,7 +71,7 @@ const MapCanvas = () => {
       <Loader
         containerStyles={{ background: "white", zIndex: 10 }}
         innerStyles={{ background: "white" }}
-        barStyles={{ background: "black" }}
+        barStyles={{ background: "red" }}
         dataStyles={{ color: "black" }}
       />
     </div>
