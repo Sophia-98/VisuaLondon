@@ -68,7 +68,12 @@ const MapCanvas = () => {
           onAnimationComplete={() => setCameraAnimationInProgress(false)}
         />
       </Canvas>
-      <Loader />
+      <Loader
+        containerStyles={{ background: "white", zIndex: 10 }}
+        innerStyles={{ background: "white" }}
+        barStyles={{ background: "black" }}
+        dataStyles={{ color: "black" }}
+      />
     </div>
   );
 };
